@@ -1,0 +1,58 @@
+------------Exercicio 1 ---------------
+
+Igual ao 8 da lista 2
+
+------------Exercicio 2 ---------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero = 0;
+
+        System.out.println("Digite um numero ");
+        numero = teclado.nextInt();
+
+        if (numero % 2 == 0) {
+            System.out.println(numero + " é par");
+        } else {
+            System.out.println(numero + " é impar");
+        }
+    }
+}
+------------Exercicio 3 ---------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero = 0;
+
+        System.out.println("Digite um numero de 1 a 9 ");
+        numero = teclado.nextInt();
+
+        if (numero >= 1 && numero <= 9) {
+            System.out.println(numero + " esta na faixa permitida");
+        } else {
+            System.out.println(numero + " não esta na faixa permitida");
+        }
+    }
+}
+------------Exercicio 4 ---------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero = 0;
+
+        System.out.println("Digite um numero ");
+        numero = teclado.nextInt();
+
+        if (numero > 3) {
+            System.out.println(numero + " é maior que 3");
+        } else {
+            System.out.println(numero + " não é maior que 3");
+        }
+    }
+}
