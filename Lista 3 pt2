@@ -1,0 +1,134 @@
+----------------Exercicio 1-----------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero1, numero2, numero3, maior, menor, meio = 0;
+
+        System.out.println("Digite um numero: ");
+        numero1 = teclado.nextInt();
+        maior = numero1;
+        menor = numero1;
+        meio = numero1;
+
+        System.out.println("Digite outro numero: ");
+        numero2 = teclado.nextInt();
+        if (numero2 > maior) maior = numero2;
+        if (numero2 < menor) menor = numero2;
+        if (numero2 > menor && numero2 < maior) meio = numero2;
+
+        System.out.println("Digite algum outro numero: ");
+        numero3 = teclado.nextInt();
+        if (numero3 > maior) maior = numero3;
+        if (numero3 < menor) menor = numero3;
+        if (numero3 > menor && numero3 < maior) meio = numero3;
+
+        System.out.println("Seus numeros em ordem crescente sao: " + menor + ", " + meio + " e " + maior);
+    }
+}
+----------------Exercicio 2-----------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero1, numero2 = 0;
+
+        System.out.println("Digite um numero ");
+        numero1 = teclado.nextInt();
+        System.out.println("Digite algum outro numero ");
+        numero2 = teclado.nextInt();
+
+        if (numero1 == numero2) {
+            System.out.println("Valores iguais não são permitidos ");
+        } else if (numero1 > numero2) {
+            System.out.println(numero1 + " é maior que o " + numero2);
+        } else {
+            System.out.println(numero2 + " é maior que o " + numero1);
+        }
+    }
+}
+----------------Exercicio 3-----------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int idade = 0;
+
+        System.out.println("Digite um numero ");
+        idade = teclado.nextInt();
+
+        if (idade >= 0 && idade < 10) {
+            System.out.println("Ola criança");
+        } else if (idade >= 11 && idade < 14) {
+            System.out.println("Ola pre-adolescente");
+        } else if (idade >= 15 && idade < 18) {
+            System.out.println("Parabens voce ja pode ser um eleitor");
+        } else if (idade >= 19 && idade < 21) {
+            System.out.println("Hmmmm voce ja e um adulto");
+        } else {
+            System.out.println("Bem, ja esta na hora de vc seguir sua vida");
+        }
+    }
+}
+----------------Exercicio 4-----------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double altura, peso, imc = 0;
+
+        System.out.println("Digite o seu peso ");
+        peso = teclado.nextDouble();
+
+        System.out.println("Digite a sua altura ");
+        altura = teclado.nextDouble();
+
+        imc = peso / (Math.pow(altura, 2));
+
+        if (imc < 18.5) {
+            System.out.println("Magreza");
+        } else if (imc >= 18.5 && imc < 24.9) {
+            System.out.println("Normal");
+        } else if (imc >= 25 && imc < 29.9) {
+            System.out.println("Sobrepeso");
+        } else if (imc >= 30 && imc < 39.9) {
+            System.out.println("Obesidade com grau 2");
+        } else {
+            System.out.println("Obesidade grave com grau de obesidade igual a 3");
+        }
+    }
+}
+----------------Exercicio 5-----------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double nota1, nota2, nota3, media = 0;
+
+        System.out.println("Digite a sua nota da avaliacao 1 ");
+        nota1 = teclado.nextDouble();
+
+        System.out.println("Digite a sua nota da avaliacao 2 ");
+        nota2 = teclado.nextDouble();
+
+        System.out.println("Digite a sua nota de trabalho ");
+        nota3 = teclado.nextDouble();
+
+        media = ((0.30 * nota1) + (0.40 * nota2) + (0.30 * nota3));
+
+        if (media < 4.99) {
+            System.out.println("Aluno reprovado");
+        } else if (media >= 5 && media < 7.49) {
+            System.out.println("Aluno aprovado");
+        } else {
+            System.out.println("Aluno aprovado com excelencia");
+        }
+    }
+}
+----------------Exercicio 6-----------------
+----------------Exercicio 7-----------------
