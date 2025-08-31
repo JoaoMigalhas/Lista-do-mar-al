@@ -1,1 +1,190 @@
+--------Exercicio 1-------------
+import java.util.Scanner;
 
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double p1, p2, p3, media = 0.00;
+
+        System.out.println("Quanto voce tirou p1?");
+        p1 = teclado.nextDouble();
+
+        System.out.println("Quanto voce tirou na p2?");
+        p2 = teclado.nextDouble();
+
+        System.out.println("Quanto voce tirou na p3?");
+        p3 = teclado.nextDouble();
+
+        media = ((p1 + p2 + p3) / 3);
+
+        System.out.println("Sua media foi igual a " + media);
+    }
+
+----------Exercicio 2 ----------------------
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double aulas, salariobruto, desconto, ir, inss, salarioliquido, beneficio, salariomensal = 0.00;
+
+        System.out.println("Quantas aulas voce da por semana?");
+        aulas = teclado.nextDouble();
+
+        salariobruto = (25 * aulas * 4);
+        beneficio = (salariobruto * 0.10);
+        salariomensal = (salariobruto + beneficio);
+
+        ir = (salariomensal * 0.05);
+        inss = (salariomensal * 0.07);
+        desconto = (ir + inss);
+
+        salarioliquido = (salariomensal - desconto);
+
+        System.out.println("Seu salario bruto é " + salariomensal);
+        System.out.println("Seu desconto salarial é " + desconto);
+        System.out.println("Seu salario salario líquido é " + salarioliquido);
+    }
+}
+
+--------------Exercicio 3 ---------------
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double raio, pi, area = 0.00;
+
+        System.out.println("Quanto de raio tem a sua circunferencia? ");
+        raio = teclado.nextDouble();
+
+        pi = 3.14;
+
+        area = (pi * Math.pow(raio, 2));
+
+        System.out.println("A area da sua circunferencia é igual a " + area);
+    }
+}
+--------------Exercicio 4 ---------------
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double celsius, far = 0;
+
+        System.out.print("Quantos graus celsius voce quer converter em fahrenheit? ");
+        celsius = teclado.nextDouble();
+
+        far = ((celsius * 1.8) + 32);
+
+        System.out.print(far + " graus em fahrenheit");
+    }
+}
+--------------Exercicio 5 ---------------
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double raio, altura, volume = 0;
+
+        System.out.print("Qual o raio da sua lata? ");
+        raio = teclado.nextDouble();
+
+        System.out.print("Qual a altura da lata? ");
+        altura = teclado.nextDouble();
+
+        volume = (3.14149 * Math.pow(raio, 2) * altura);
+
+        System.out.print("O volume da sua lata é igual a " + volume);
+    }
+}
+--------------Exercicio 6 ---------------
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double prestacao, valortotal, taxa, tempo = 0;
+
+        System.out.print("Qual é o valor do seu produto? ");
+        valortotal = teclado.nextDouble();
+
+        System.out.print("Qual a taxa das prestações? ");
+        taxa = teclado.nextDouble();
+
+        System.out.print("Quantas tempo de atraso? ");
+        tempo = teclado.nextDouble();
+
+        prestacao = (valortotal * (taxa / 100) * tempo);
+
+        System.out.print("Voce ira pagar " + prestacao + " reais de prestacao");
+    }
+}
+--------------Exercicio 7 ---------------
+import java.util.Scanner;
+
+public class Main
+{
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double dolar, real, euro, taxadolar, taxaeur = 0;
+
+        System.out.print("Quantas reais voce quer converter? ");
+        real = teclado.nextDouble();
+
+        System.out.print("Qual a cotação do dolar atual? ");
+        taxadolar = teclado.nextDouble();
+
+        System.out.print("Qual a cotação do euro atual? ");
+        taxaeur = teclado.nextDouble();
+
+        dolar = (real * taxadolar);
+        euro = (real * taxaeur);
+
+        System.out.print("Voce tem " + real + " reais que convertido em dolar é igual a " 
+            + dolar + " dolares que convertido em euro é igual a " + euro + " euros");
+    }
+}
+--------------Exercicio 8 ---------------
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        double notafinal, notap1, notap2, atv, ead, av1, av2, pluri = 0;
+
+        System.out.print("Quanto voce tirou nas atividades? ");
+        atv = teclado.nextDouble();
+
+        System.out.print("Quanto voce tirou na disciplina EAD? ");
+        ead = teclado.nextDouble();
+
+        System.out.print("Qual foi a sua nota da p1? ");
+        av1 = teclado.nextDouble();
+
+        System.out.print("Qual foi a sua nota da p2? ");
+        av2 = teclado.nextDouble();
+
+        System.out.print("Quanto voce tirou na PLURI? ");
+        pluri = teclado.nextDouble();
+
+        notap1 = ((atv * 0.20) + (ead * 0.20) + (av1 * 0.60));
+        notap2 = ((atv * 0.20) + (ead * 0.20) + (pluri * 0.20) + (av2 * 0.40));
+
+        notafinal = ((notap1 * 0.40) + (notap2 * 0.60));
+
+        System.out.println("Sua N1 é igual a " + notap1);
+        System.out.println("Sua N2 é igual a " + notap2);
+        System.out.println("Sua media final portanto é igual a " + notafinal);
+    }
+}
