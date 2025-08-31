@@ -1,0 +1,300 @@
+-----------------Exercico 1 --------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        int num1, num2, diferenca;
+
+        System.out.print("Qual o numero que voce deseja? ");
+        num1 = teclado.nextInt();
+
+        System.out.print("Qual o seu segundo numero? ");
+        num2 = teclado.nextInt();
+
+        diferenca = Math.abs(num1 - num2); // valor absoluto da diferença
+
+        System.out.println("A diferença é igual a " + diferenca);
+    }
+}
+-----------------Exercico 2 --------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        int numero, numeropositivo;
+
+        System.out.print("Digite um numero: ");
+        numero = teclado.nextInt();
+
+        if (numero < 0) {
+            numeropositivo = numero * -1; // transforma em positivo
+            System.out.println("Seu numero positivo é igual a " + numeropositivo);
+        } else {
+            System.out.println("Seu numero positivo é igual a " + numero);
+        }
+    }
+}
+-----------------Exercico 3 --------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        double nota1, nota2, nota3, nota4, media;
+
+        System.out.print("Qual foi a sua primeira nota ? ");
+        nota1 = teclado.nextDouble();
+
+        System.out.print("Qual foi a sua segunda nota ? ");
+        nota2 = teclado.nextDouble();
+
+        System.out.print("Qual foi a sua terceira nota ? ");
+        nota3 = teclado.nextDouble();
+
+        System.out.print("Qual foi a sua quarta nota ? ");
+        nota4 = teclado.nextDouble();
+
+        media = ((nota1 + nota2 + nota3 + nota4) / 4);
+
+        if (media >= 5) {
+            System.out.print("Aluno aprovado com " + media + " de média");
+        } else {
+            System.out.print("Aluno reprovado com " + media + " de média");
+        }
+    }
+}
+-----------------Exercico 4 --------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        double nota1, nota2, nota3, nota4, mediaFinal, notaExame, mediaFinalComExame;
+
+        System.out.print("Qual foi a sua primeira nota ? ");
+        nota1 = teclado.nextDouble();
+
+        System.out.print("Qual foi a sua segunda nota ? ");
+        nota2 = teclado.nextDouble();
+
+        System.out.print("Qual foi a sua terceira nota ? ");
+        nota3 = teclado.nextDouble();
+
+        System.out.print("Qual foi a sua quarta nota ? ");
+        nota4 = teclado.nextDouble();
+
+        mediaFinal = ((nota1 + nota2 + nota3 + nota4) / 4);
+
+        if (mediaFinal >= 7) {
+            System.out.print("Aluno aprovado com " + mediaFinal + " de media.");
+        } else if (mediaFinal >= 5 && mediaFinal < 7) {
+            System.out.print("Aluno em exame. Por favor, digite a nota do exame: ");
+            notaExame = teclado.nextDouble();
+
+            mediaFinalComExame = (mediaFinal + notaExame) / 2;
+
+            if (mediaFinalComExame >= 5) {
+                System.out.print("Aluno aprovado no exame com " + mediaFinalComExame + " de media final.");
+            } else {
+                System.out.print("Aluno reprovado no exame com " + mediaFinalComExame + " de media final.");
+            }
+        } else {
+            System.out.print("Aluno reprovado com " + mediaFinal + " de media.");
+        }
+    }
+}
+-----------------Exercico 5 --------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        double nota1, nota2, nota3, media = 0;
+
+        System.out.println("Digite a sua nota da avaliação 1");
+        nota1 = teclado.nextDouble();
+
+        System.out.println("Digite a sua nota da avaliação 2");
+        nota2 = teclado.nextDouble();
+
+        System.out.println("Digite a sua nota de trabalho");
+        nota3 = teclado.nextDouble();
+
+        media = ((0.30 * nota1) + (0.40 * nota2) + (0.30 * nota3));
+
+        if (media <= 4.99) {
+            System.out.println("Aluno reprovado");
+        } else if (media >= 5 && media < 7.49) {
+            System.out.println("Aluno aprovado");
+        } else {
+            System.out.println("Aluno aprovado com excelencia");
+        }
+    }
+}
+-----------------Exercico 6 --------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero1, numero2, numero3, numero4 = 0;
+
+        System.out.print("Digite um numero: ");
+        numero1 = teclado.nextInt();
+
+        System.out.print("Digite outro numero: ");
+        numero2 = teclado.nextInt();
+
+        System.out.print("Digite um terceiro numero: ");
+        numero3 = teclado.nextInt();
+
+        System.out.print("Digite um ultimo numero: ");
+        numero4 = teclado.nextInt();
+
+        if ((numero1 % 2 == 0) && (numero1 % 3 == 0)) {
+            System.out.print(numero1 + " é divisivel por 2 e 3");
+        }
+        if ((numero2 % 2 == 0) && (numero2 % 3 == 0)) {
+            System.out.print(numero2 + " é divisivel por 2 e 3");
+        }
+        if ((numero3 % 2 == 0) && (numero3 % 3 == 0)) {
+            System.out.print(numero3 + " é divisivel por 2 e 3");
+        }
+        if ((numero4 % 2 == 0) && (numero4 % 3 == 0)) {
+            System.out.print(numero4 + " é divisivel por 2 e 3");
+        } else {
+            System.out.print("Nenhum desses numeros são divisiveis por 2 e 3");
+        }
+    }
+}
+-----------------Exercico 7 --------------------
+import java.util.Scanner;
+
+public class exercicio7 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero1, numero2, numero3, numero4 = 0;
+
+        System.out.print("Digite um numero: ");
+        numero1 = teclado.nextInt();
+
+        System.out.print("Digite outro numero: ");
+        numero2 = teclado.nextInt();
+
+        System.out.print("Digite um terceiro numero: ");
+        numero3 = teclado.nextInt();
+
+        System.out.print("Digite um ultimo numero: ");
+        numero4 = teclado.nextInt();
+
+        if (numero1 % 2 == 0) {
+            System.out.print(numero1 + " é divisivel por 2");
+        } else if (numero1 % 3 == 0) {
+            System.out.print(numero1 + " é divisivel por 3");
+        } else {
+            System.out.print(numero1 + " não é divisivel por 2 nem por 3");
+        }
+
+        if (numero2 % 2 == 0) {
+            System.out.print(numero2 + " é divisivel por 2");
+        } else if (numero2 % 3 == 0) {
+            System.out.print(numero2 + " é divisivel por 3");
+        } else {
+            System.out.print(numero2 + " não é divisivel por 2 nem por 3");
+        }
+
+        if (numero3 % 2 == 0) {
+            System.out.print(numero3 + " é divisivel por 2");
+        } else if (numero3 % 3 == 0) {
+            System.out.print(numero3 + " é divisivel por 3");
+        } else {
+            System.out.print(numero3 + " não é divisivel por 2 nem por 3");
+        }
+
+        if (numero4 % 2 == 0) {
+            System.out.print(numero4 + " é divisivel por 2");
+        } else if (numero4 % 3 == 0) {
+            System.out.print(numero4 + " é divisivel por 3");
+        } else {
+            System.out.print(numero4 + " não é divisivel por 2 nem por 3");
+        }
+    }
+}
+-----------------Exercico 8 --------------------
+import java.util.Scanner;
+
+public class exercicio8 {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int numero1, numero2, numero3, numero4, numero5, maior, menor = 0;
+
+        System.out.println("Digite o primeiro numero:");
+        numero1 = teclado.nextInt();
+        maior = numero1;
+        menor = numero1;
+
+        System.out.println("Digite o segundo numero:");
+        numero2 = teclado.nextInt();
+        if (numero2 > maior) maior = numero2;
+        if (numero2 < menor) menor = numero2;
+
+        System.out.println("Digite o terceiro numero:");
+        numero3 = teclado.nextInt();
+        if (numero3 > maior) maior = numero3;
+        if (numero3 < menor) menor = numero3;
+
+        System.out.println("Digite o quarto numero:");
+        numero4 = teclado.nextInt();
+        if (numero4 > maior) maior = numero4;
+        if (numero4 < menor) menor = numero4;
+
+        System.out.println("Digite o quinto numero:");
+        numero5 = teclado.nextInt();
+        if (numero5 > maior) maior = numero5;
+        if (numero5 < menor) menor = numero5;
+
+        System.out.println("O maior numero que você digitou foi: " + maior + " e o menor foi: " + menor);
+    }
+}
+-----------------Exercico 9 --------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int a = 0;
+
+        System.out.print("Digite um numero ");
+        a = teclado.nextInt();
+
+        if (a % 2 == 0) {
+            System.out.print(a + " é um numero par");
+        } else {
+            System.out.print(a + " não é um numero par");
+        }
+    }
+}
+-----------------Exercico 10 --------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+        int a = 0;
+
+        System.out.print("Digite um numero ");
+        a = teclado.nextInt();
+
+        if (a >= 1 && a <= 5) {
+            System.out.print("O valor está na faixa permitida");
+        } else {
+            System.out.print("O valor não está na faixa permitida");
+        }
+    }
+}
