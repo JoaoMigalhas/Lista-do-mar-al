@@ -11,7 +11,6 @@ public class Main
 	double basetriangulo, alturatriangulo = 0;
 	double raio = 0;
 	double pi = 3.14;
-	int maior, menor, segunda, terceira = 0;
 	
 	
 	System.out.println("Digite o valor da base do seu retangulo: ");
@@ -41,16 +40,16 @@ public class Main
 	 //triangulo 
 	 areatriangulo = ((basetriangulo * alturatriangulo) / 2);
 	 
+	
+	//maior e menor
+
 	 
+	//ordem crescente
 	 
-	 if (arearetangulo < areaquadrado && arearetangulo < areatriangulo && arearetangulo < areacirculo){
-	     menor = arearetangulo;
-	 } else if 
 	 
 	System.out.println("Aqui esta o valor da area do seu retangulo " + arearetangulo + " do seu quadrado " + areaquadrado + " do seu circulo " + areacirculo + " e do seu triangulo " + areatriangulo);
 	System.out.println("A menor area foi a: " + menor);
 	System.out.println("A maior area foi a: " + maior);
-	System.out.println("As areas em ordem crescente" + menor + ", " + terceira + ", " + segunda + " e " + maior);
 	}
 }
 ------------------Exercicio2------------------
