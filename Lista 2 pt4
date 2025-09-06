@@ -74,6 +74,134 @@ public class listamarcal
 	}
 }
 ------------------Exercicio2------------------
+import java.util.Scanner;
+
+public class listamarcal
+{
+	public static void main(String[] args) {
+	Scanner teclado = new Scanner(System.in);
+	double dolar, euro, libras = 0;
 
 
+	//cotaçoes
+	System.out.println("Diga qual a cotação atual do dolar: ");
+	dolar = teclado.nextDouble();
+	teclado.nextLine();
+	System.out.println("Diga qual a cotação atual do euro: ");
+	euro = teclado.nextDouble();
+	teclado.nextLine();
+	System.out.println("Diga qual a cotação atual das libras esterlinas: ");
+	libras = teclado.nextDouble();
+	teclado.nextLine();
+
+	//nomes
+	System.out.println(("Primeiro nome: "));
+	String nome1 = teclado.nextLine();
+
+	System.out.println(("Segundo nome: "));
+	String nome2 = teclado.nextLine();
+
+	System.out.println(("Terceiro nome: "));
+	String nome3 = teclado.nextLine();
+
+	System.out.println(("Ultimo nome: "));
+	String nome4 = teclado.nextLine();	
+
+	//quantos reais
+	System.out.println("Quantos reais vocês cada um esta levando? ");
+
+	System.out.println("Quantos reais tem o " + nome1 + " ?");
+	double reais1 = teclado.nextDouble();
+
+	System.out.println("Quantos reais tem o " + nome2 + " ?");
+	double reais2 = teclado.nextDouble();
+
+	System.out.println("Quantos reais tem o " + nome3 + " ?");
+	double reais3 = teclado.nextDouble();
+
+	System.out.println("Quantos reais tem o " + nome4 + " ?");
+	double reais4 = teclado.nextDouble();
+
+	//total de reais
+	double totalreais = (reais1 + reais2 + reais3 + reais4);
+
+	//mostrar quem tem mais dinhero
+	double maior = reais1;
+
+	if(reais2 > maior) maior = reais2;
+	if(reais3 > maior) maior = reais3;
+	if(reais4 > maior) maior = reais4;
+
+	double menor = reais1;
+	if(reais2 < menor) menor = reais2;
+	if(reais3 < menor) menor = reais3;
+	if(reais4 < menor) menor = reais4;
+
+	//converter quanto cada um tem
+	double dolar1 = (reais1 / dolar);
+	double euro1 = (reais1 / euro);
+	double libra1 = (reais1 / libras);
+
+	double dolar2 = (reais2 / dolar);
+	double euro2 = (reais2 / euro);
+	double libra2 = (reais2 / libras);
+
+	double dolar3 = (reais3 / dolar);
+	double euro3 = (reais3 / euro);
+	double libra3 = (reais3 / libras);
+
+	double dolar4 = (reais4 / dolar);
+	double euro4 = (reais4 / euro);
+	double libra4 = (reais4 / libras);
+
+	//ordem crescente de reais
+	double a = reais1;
+	double b = reais2;
+	double c = reais3;
+	double d = reais4;
+
+	if (a > b) { double temp = a; a = b; b = temp; }
+	if (a > c) { double temp = a; a = c; c = temp; }
+	if (a > d) { double temp = a; a = d; d = temp; }
+	if (b > c) { double temp = b; b = c; c = temp; }
+	if (b > d) { double temp = b; b = d; d = temp; }
+	if (c > d) { double temp = c; c = d; d = temp; }
+
+	//mostrar a mensagem
+	System.out.println(("Juntando os valores em reais, vocês possuem: " + totalreais + " de reais"));
+	
+	if (maior == reais1){
+		System.out.println(nome1 + " possui " + reais1 + " reais, portanto é o que tem a maior quantidade de reais");
+	}
+	if (maior == reais2){
+		System.out.println(nome2 + " possui " + reais2 + " reais, portanto é o que tem a maior quantidade de reais");
+	}
+	if (maior == reais3){
+		System.out.println(nome3 + " possui " + reais3 + " reais, portanto é o que tem a maior quantidade de reais");
+	}
+	if (maior == reais4){
+		System.out.println(nome4 + " possui " + reais4 + " reais, portanto é o que tem a maior quantidade de reais");
+	}
+
+	if (menor == reais1){
+		System.out.println(nome1 + " possui " + reais1 + " reais, portanto é o que tem a menor quantidade de reais");
+	}
+	if (menor == reais2){
+		System.out.println(nome2 + " possui " + reais2 + " reais, portanto é o que tem a menor quantidade de reais");
+	}
+	if (menor == reais3){
+		System.out.println(nome3 + " possui " + reais3 + " reais, portanto é o que tem a menor quantidade de reais");
+	}
+	if (menor == reais4){
+		System.out.println(nome4 + " possui " + reais4 + " reais, portanto é o que tem a menor quantidade de reais");
+	}	
+
+	System.out.println(nome1 + " tem " + reais1 + " em reais" + ", " + dolar1 + " de dolares" + ", " + euro1 + " de euros" + " e " + libra1 + " em libras");
+	System.out.println(nome2 + " tem " + reais2 + " em reais" + ", " + dolar2 + " de dolares" + ", " + euro2 + " de euros" + " e " + libra2 + " em libras");
+	System.out.println(nome3 + " tem " + reais3 + " em reais" + ", " + dolar3 + " de dolares" + ", " + euro3 + " de euros" + " e " + libra3 + " em libras");
+	System.out.println(nome4 + " tem " + reais4 + " em reais" + ", " + dolar4 + " de dolares" + ", " + euro4 + " de euros" + " e " + libra4 + " em libras");
+
+	System.out.println("A ordem crescente em reais é igual a: " + a + ", " + b + ", " + c + " e " + d);
+	}
+}
 ------------------Exercicio3------------------
