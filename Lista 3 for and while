@@ -8,3 +8,169 @@ public class exercicio1 {
     }
 
 }
+---------------------Exercicio 2 -----------------------------------
+import java.util.Scanner;
+public class listamarcal
+{
+	public static void main(String[] args) {
+	Scanner teclado = new Scanner(System.in);
+
+	System.out.println("Digite um numero para saber a sua tabuada: ");
+	int num = teclado.nextInt();
+
+	for ( int i = 1; i <= 10; i++){
+		int resultado = num * i;
+		System.out.println("A tabuada do " + num + " é " + resultado);
+	}
+	}
+}
+---------------------Exercicio 3 -----------------------------------
+public class listamarcal
+{
+	public static void main(String[] args) {
+	
+	int soma = 0;
+
+	for ( int i = 1; i <= 100; i++){
+		soma = soma + i;
+	}
+	System.out.println(soma);
+}
+}
+---------------------Exercicio 4 -----------------------------------
+public class listamarcal
+{
+	public static void main(String[] args) {
+	
+	int somapares = 0;
+
+	for ( int i = 1; i <= 500; i++){
+		if ( i % 2 == 0) {
+			somapares += i;
+		}
+	}
+	System.out.println(somapares);
+}
+}
+---------------------Exercicio 5 -----------------------------------
+public class listamarcal
+{
+	public static void main(String[] args) {
+	
+	for ( int i = 1; i <= 20; i++){
+		if ( i % 2 == 1) {
+		
+		System.out.println(i);
+		}
+	}
+}
+}
+---------------------Exercicio 6 -----------------------------------
+public class listamarcal
+{
+	public static void main(String[] args) {
+	
+	for ( int i = 1; i <= 200; i++){
+		if ( i % 4 == 0) {
+		System.out.println(i);
+		}
+	}
+}
+}
+---------------------Exercicio 7 -----------------------------------
+public class listamarcal
+{
+	public static void main(String[] args) {
+	
+	int potencia = 1;
+	
+	for ( int i = 0; i <= 15; i++){
+		if (i == 0){
+			System.out.println("1");
+			continue;
+		} 
+		potencia = potencia * 3;
+		System.out.println(" 3 ^ " + i + " é " + potencia);
+	}
+}
+}
+---------------------Exercicio 8 -----------------------------------
+import java.util.Scanner;
+public class listamarcal
+{
+	public static void main(String[] args) {
+	Scanner teclado = new Scanner(System.in);
+
+	int base = teclado.nextInt();
+	int expoente = teclado.nextInt();
+
+	double resultado = 1;
+
+	if (expoente == 0){
+		resultado = 1;
+	} else {
+		for ( int i =0; i < expoente; i++){
+			resultado *= base;
+		}
+	}
+	
+	System.out.println(base + " elevado a " + expoente + " é igual a " + resultado);
+
+	}
+}
+---------------------Exercicio 9 -----------------------------------
+import java.util.Scanner;
+public class listamarcal
+{
+	public static void main(String[] args) {
+	Scanner teclado = new Scanner(System.in);
+
+	int num = teclado.nextInt();
+	long fatorial = 1;
+	
+	if (num < 0) {
+		System.out.println("erro");
+	} 
+	else if (num == 0) {
+		System.out.println("o fatorial é 1");
+	} else {
+            for (int i = 1; i <= num; i++) {
+                fatorial = fatorial * i;
+		}
+		System.out.println("o fatorial de " + num + " é " + fatorial);
+		
+	}
+	}
+}
+---------------------Exercicio 10 -----------------------------------
+import java.util.Scanner;
+
+public class listamarcal {
+
+    public static void main(String[] args) {
+    Scanner teclado = new Scanner(System.in);
+
+        long soma = 0;
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("digite o " + i + " número: ");
+            int numero = teclado.nextInt();
+            long fatorial = 1;
+
+            if (numero < 0) {
+                System.out.println("fatorial negativo");
+                continue;
+            } else if (numero == 0) {
+                fatorial = 1;
+            } else {
+                for (int n = 1; n <= numero; n++) {
+                    fatorial *= n;
+                }
+            }
+
+            soma += fatorial;
+            System.out.println("O fatorial de " + numero + " é " + fatorial);
+        }
+;       System.out.println("A soma total de todos os fatoriais é: " + soma);
+    }
+}
