@@ -1,0 +1,140 @@
+-------------------------Exercicio 1---------------------
+public class listamarcal
+{
+	public static void main(String[] args) {
+	int primeiro =1, segundo = 1;
+	
+	System.out.println("A série de fibonaccia até o 15 termo:");
+        System.out.print(primeiro + " " + segundo);
+
+        for (int i = 3; i <= 15; i++) {
+            int proximo = primeiro + segundo;
+            System.out.print(" " + proximo);
+            primeiro = segundo;
+            segundo = proximo;
+        }
+    }
+}
+-------------------------Exercicio 2---------------------
+public class listamarcal
+{
+	public static void main(String[] args) {
+
+	System.out.println("Aqui esta os graus celsius e em fahrenheit:");
+
+        for (int i = 10; i <= 100; i += 10) {
+			double fahrenheit = ((i * 1.8) + 32);
+			System.out.println("Em Celsius: " + i);
+			System.out.println("Em Fahrenheit: " + fahrenheit);
+        }
+    }
+}
+-------------------------Exercicio 3---------------------
+public class GraosTrigo {
+    public static void main(String[] args) {
+        int casas = 64;
+        double graos = 1;
+        double soma = 1;  
+
+        for (int i = 2; i <= casas; i++) {
+            graos *= 2;     
+            soma += graos;  
+        }
+
+        System.out.println("Total aproximado de grãos de trigo no tabuleiro:");
+        System.out.printf("%.0f%n", soma);
+    }
+}
+-------------------------Exercicio 4---------------------
+    public static void main(String[] args) {
+    Scanner teclado = new Scanner(System.in);
+
+        long soma = 0;
+
+        for (int i = 1; i <= 5; i++) {
+            System.out.print("digite o " + i + " número: ");
+            int numero = teclado.nextInt();
+            long fatorial = 1;
+
+            for (int n = 1; n <= numero; n++) {
+                    fatorial *= n;
+                }
+            soma += fatorial;
+        }
+;       System.out.println("A soma total de todos os fatoriais é: " + soma);
+    }
+}
+-------------------------Exercicio 5---------------------
+import java.util.Scanner;
+
+public class GraosTrigo {
+    public static void main(String[] args) {
+    Scanner teclado = new Scanner(System.in); 
+
+    double soma = 0;
+
+    for (int i = 1; i <= 6; i++) {
+            System.out.print("Digite o " + i + "º valor: ");
+            double valor = teclado.nextDouble();
+            soma += valor;
+        }
+
+        double media = soma / 6;
+
+        System.out.println("\nSoma dos valores = " + soma);
+        System.out.println("Média dos valores = " + media);
+    }
+}
+-------------------------Exercicio 6---------------------
+import java.util.Scanner;
+
+public class SomarPositivos {
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        double soma = 0;
+        int quantidade = 0;
+
+        while (true) {
+            System.out.print("Digite um valor positivo (ou um negativo para parar): ");
+            double valor = teclado.nextDouble();
+
+            if (valor < 0) {
+                break; 
+            }
+
+            soma += valor;
+            quantidade++;
+        }
+
+        if (quantidade > 0) {
+            double media = soma / quantidade;
+            System.out.println("\nTotal de valores somados: " + quantidade);
+            System.out.println("Soma dos valores: " + soma);
+            System.out.println("Média: " + media);
+        } else {
+            System.out.println("\nNenhum valor positivo foi informado.");
+        }
+
+    }
+}
+-------------------------Exercicio 7---------------------
+public class SomaFatoriaisImpares {
+    public static void main(String[] args) {
+        long soma = 0; 
+        int contadorImpares = 0;
+
+        for (int i = 1; i <= 20; i += 2) { 
+            long fatorial = 1;
+            for (int j = 1; j <= i; j++) {
+                fatorial *= j;
+            }
+
+            soma += fatorial;
+            contadorImpares++;
+        }
+
+        System.out.println("Número de valores ímpares entre 1 e 20: " + contadorImpares);
+        System.out.println("Soma dos fatoriais dos valores ímpares: " + soma);
+    }
+}
